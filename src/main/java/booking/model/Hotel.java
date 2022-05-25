@@ -12,7 +12,6 @@ import lombok.RequiredArgsConstructor;
 @Entity
 public class Hotel {
 	@Id
-	@GeneratedValue
 	private long id;
 	private String name, address;
 	private int starLevel;
