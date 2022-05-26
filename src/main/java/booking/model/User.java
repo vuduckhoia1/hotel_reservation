@@ -1,21 +1,26 @@
 package booking.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Data
-@RequiredArgsConstructor
 @Entity
+@Table(name="user")
+@RequiredArgsConstructor
 public class User {
 	@Id
-	@GeneratedValue
-	private long id;
+	@Column(name="id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String username;
 	private String password;
-	private String email;
-	private int role;
+
+	private String role;
+	private boolean enabled;
+
+
+	
+	
 }
